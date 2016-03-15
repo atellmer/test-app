@@ -1,0 +1,22 @@
+<div>
+	<div ng-click="show()" class="btn-menu">
+		<i class="material-icons btn-menu__icon">menu</i>
+	</div>
+	<div id="my-super-menu" class="my-super-menu">
+		<div class="row content-menu">
+			<div class="col-xs-12 col-sm-12 no-padding max-height">
+				<ul class="content-menu__list">
+					<li ng-click="hide()" ui-sref="cats" ui-sref-active="list__item--active" class="list__item list__item--active">Cats</li>
+					<div class="divider"></div>
+					<li ng-click="hide()" ui-sref="dogs" ui-sref-active="list__item--active" class="list__item">Dogs</li>
+					<div class="divider"></div>
+					<li ng-click="hide()" ui-sref="horses" ui-sref-active="list__item--active" class="list__item">Horses</li>
+					<div class="divider"></div>
+					<li ng-click="hide()" ui-sref="contactus" ui-sref-active="list__item--active" class="list__item">Contact us</li>
+					<div class="divider"></div>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div ng-click="hide()" class="menu-overlay"></div>
+</div>

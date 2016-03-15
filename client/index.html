@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+	<base href="/">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+	<title>Test App</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="dist/bundle.min.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<my-menu></my-menu>
+		<div class="wrap">
+			<header class="header">
+				<div class="header__title">Animals (test app)</div>
+				<ul class="nav nav-pills main-menu">
+					<li ui-sref="cats" ui-sref-active="main-menu__item--active" class="main-menu__item">Cats</li>
+					<li ui-sref="dogs" ui-sref-active="main-menu__item--active" class="main-menu__item">Dogs</li>
+					<li ui-sref="horses" ui-sref-active="main-menu__item--active" class="main-menu__item">Horses</li>
+					<li ui-sref="contactus" ui-sref-active="main-menu__item--active" class="main-menu__item">Contactus</li>
+				</ul>
+			</header>
+			<ui-view></ui-view>
+		</div>
+		<footer class="footer">
+			<div class="row no-padding">
+				<div class="col-xs-12 col-sm-12 col-md-6">
+					<div class="footer__title">Animals footer (angular test app)</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6">
+					<div class="btn-help" data-toggle="modal" data-target="#myModal">Help</div>
+				</div>
+			</div>
+		</footer>
+
+		<div ng-controller="ModalCtrl">
+			<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+				<div class="modal-dialog my-modal-dialog">
+					<div class="modal-content my-modal-content">
+						<div class="modal-header my-modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title">Help modal</h4>
+						</div>
+						<div class="modal-body my-modal-body">
+							<span></span>
+						</div>
+						<div class="modal-footer my-modal-footer">
+							<button ng-click="yes()" type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+							<button ng-click="no()" type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="bower_components/valdr/valdr.min.js"></script>
+		<script src="dist/bundle.min.js"></script>
+</body>
+
+</html>
